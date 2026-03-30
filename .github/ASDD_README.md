@@ -114,7 +114,7 @@ Al cerrar el feature:
 
 ---
 
-### Flujo completo con Orchestrator
+## Flujo completo con Orchestrator
 
 ```
 @Orchestrator ejecuta el flujo completo para: [tu requerimiento]
@@ -134,8 +134,8 @@ Al cerrar el feature:
 | `@Backend Developer` | Fase 2 ∥ | Implementar el backend según la spec |
 | `@Frontend Developer` | Fase 2 ∥ | Implementar el frontend según la spec |
 | `@Database Agent` | Fase 2 ∥ | Diseñar modelos de datos, migrations y seeders |
-| `@Test Engineer Backend` | Fase 3 ∥ | Generar tests para el backend (paralelo con Frontend) |
-| `@Test Engineer Frontend` | Fase 3 ∥ | Generar tests para el frontend (paralelo con Backend) |
+| `@Test Engineer Backend` | Fase 3 ∥ | Generar pruebas unitarias para el backend (paralelo con Frontend) |
+| `@Test Engineer Frontend` | Fase 3 ∥ | Generar pruebas unitarias para el frontend (paralelo con Backend) |
 | `@QA Agent` | Fase 4 | Gherkin, riesgos y análisis de performance |
 | `@Documentation Agent` | Fase 5 | README, API docs y ADRs |
 
