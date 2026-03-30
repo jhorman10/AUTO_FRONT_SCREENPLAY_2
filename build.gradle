@@ -1,0 +1,46 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "net.serenity-bdd:serenity-gradle-plugin:4.2.34"
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+apply plugin: 'net.serenity-bdd.serenity-gradle-plugin'
+
+group = 'com.screenplay'
+version = '1.0-SNAPSHOT'
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation "net.serenity-bdd:serenity-core:4.2.34"
+    testImplementation "net.serenity-bdd:serenity-cucumber:4.2.34"
+    testImplementation "net.serenity-bdd:serenity-screenplay:4.2.34"
+    testImplementation "net.serenity-bdd:serenity-screenplay-webdriver:4.2.34"
+    testImplementation "io.cucumber:cucumber-java:7.15.0"
+    testImplementation "io.cucumber:cucumber-junit:7.15.0"
+    testImplementation "junit:junit:4.13.2"
+    testImplementation "org.assertj:assertj-core:3.25.3"
+    testImplementation "com.fasterxml.jackson.core:jackson-databind:2.16.1"
+    testImplementation "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.16.1"
+}
+
+test {
+    useJUnit()
+    systemProperty 'BASE_URL', System.getenv('BASE_URL') ?: 'https://automationexercise.com'
+    testLogging {
+        events 'passed', 'skipped', 'failed'
+    }
+}
+
+

@@ -1,0 +1,15 @@
+{
+  "datasetId": "carrito_base_2_items",
+  "expectedCartItemCount": 2,
+  "expectedQuantityPerItem": 1,
+  "items": [
+    {
+      "key": "producto_1",
+      "productIndex": 0
+    },
+    {
+      "key": "producto_2",
+      "productIndex": 1
+    }
+  ]
+}

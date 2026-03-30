@@ -1,0 +1,9 @@
+# Catálogo de referencia de productos disponibles en la página de productos.
+# productIndex: índice 0-based en la lista .features_items .product-image-wrapper
+productos:
+  - key: producto_1
+    productIndex: 0
+    descripcion: Primer producto del listado de productos
+  - key: producto_2
+    productIndex: 1
+    descripcion: Segundo producto del listado de productos
