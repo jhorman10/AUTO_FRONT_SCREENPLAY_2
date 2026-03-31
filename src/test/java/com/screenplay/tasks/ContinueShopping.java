@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.screenplay.config.TestConstants;
 import com.screenplay.config.UiLabels;
+import com.screenplay.config.UiScripts;
 import com.screenplay.ui.ProductPageTargets;
 
 import net.serenitybdd.annotations.Step;
@@ -27,11 +28,11 @@ public class ContinueShopping implements Task {
         WebDriver driver = BrowseTheWeb.as(actor).getDriver();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(TestConstants.ELEMENT_WAIT_SECS));
         wait.until(ExpectedConditions.visibilityOfElementLocated(
-            By.cssSelector(ProductPageTargets.CART_MODAL_SHOWN_CSS)));
+                By.cssSelector(ProductPageTargets.CART_MODAL_SHOWN_CSS)));
         WebElement button = wait.until(ExpectedConditions.elementToBeClickable(
-            By.cssSelector(ProductPageTargets.CONTINUE_SHOPPING_BUTTON_CSS)));
+                By.cssSelector(ProductPageTargets.CONTINUE_SHOPPING_BUTTON_CSS)));
         ((JavascriptExecutor) driver).executeScript(
-                "arguments[0].scrollIntoView({block:'center'}); arguments[0].click();", button);
+                UiScripts.SCROLL_INTO_VIEW_AND_CLICK, button);
     }
 
     public static ContinueShopping now() {
