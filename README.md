@@ -57,9 +57,8 @@ src/
     - tasks/
       - NavigateToHomePage.java
       - NavigateToProductsPage.java
-      - AddFirstProductToCart.java
+      - AddProductToCart.java
       - ContinueShopping.java
-      - AddSecondProductToCart.java
       - ViewCart.java
     - questions/
       - CartContainsProducts.java

@@ -104,9 +104,8 @@ CRITERIO-1.2: El modal de confirmación aparece al agregar cada producto
 | `Actor` (Comprador) | Sujeto de las pruebas | Ejecutar Tasks y formular Questions |
 | `Task: NavigateToHomePage` | Task | Abrir el navegador y cargar la URL base |
 | `Task: NavigateToProductsPage` | Task | Hacer clic en el botón "Products" de la nav |
-| `Task: AddFirstProductToCart` | Task | Hacer hover sobre el primer producto y clic en "Add to cart" |
+| `Task: AddProductToCart` | Task | Hacer hover sobre un producto (index configurable) y clic en "Add to cart" |
 | `Task: ContinueShopping` | Task | Hacer clic en el botón "Continue Shopping" del modal |
-| `Task: AddSecondProductToCart` | Task | Hacer hover sobre el segundo producto y clic en "Add to cart" |
 | `Task: ViewCart` | Task | Hacer clic en el botón "View Cart" del modal |
 | `Question: CartContainsProducts` | Question | Verificar que ambos productos están en el carrito |
 | `Question: ProductDetailsAreCorrect` | Question | Verificar precio, cantidad y total de cada producto |
@@ -145,10 +144,9 @@ src/
     │           ├── tasks/
     │           │   ├── NavigateToHomePage.java
     │           │   ├── NavigateToProductsPage.java
-    │           │   ├── AddFirstProductToCart.java
-    │           │   ├── ContinueShopping.java
-    │           │   ├── AddSecondProductToCart.java
-    │           │   └── ViewCart.java
+            │           │   ├── AddProductToCart.java
+            │           │   ├── ContinueShopping.java
+            │           │   └── ViewCart.java
     │           ├── questions/
     │           │   ├── CartContainsProducts.java
     │           │   └── ProductDetailsAreCorrect.java
@@ -293,9 +291,8 @@ dependencies {
 
 - [ ] Crear `NavigateToHomePage.java` — abre el navegador usando URL base parametrizable
 - [ ] Crear `NavigateToProductsPage.java` — clic en botón "Products"
-- [ ] Crear `AddFirstProductToCart.java` — hover + clic "Add to cart" en primer producto
+- [ ] Crear `AddProductToCart.java` — hover + clic "Add to cart" en un producto (index configurable)
 - [ ] Crear `ContinueShopping.java` — clic en "Continue Shopping" del modal
-- [ ] Crear `AddSecondProductToCart.java` — hover + clic "Add to cart" en segundo producto
 - [ ] Crear `ViewCart.java` — clic en "View Cart" del modal
 - [ ] Verificar que cada Task tiene una **única responsabilidad** (SRP)
 
